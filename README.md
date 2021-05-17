@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # UOCIS322 - Project 4 #
 ```
 Chris Cortes | ccortes@uoregon.edu
