@@ -8,5 +8,4 @@ Brevet time calculator.
 2. Refresh page if you want to change brevet distance or date/time.
 3. Enter Control locations as either miles or kilometers.
 4. Need to hit enter or click off of text block for time to refresh.
-
 ```
