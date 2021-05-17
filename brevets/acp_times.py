@@ -36,7 +36,10 @@ def open_time(control_dist_km, brevet_dist_km, brevet_start_time):
         if brevet_dist_km == 200:
             time = 200/34
         elif brevet_dist_km == 300:
-            time = (200/34) + (100/32)
+            if control_dist_km >= 300:
+                time = (200/34) + (100/32)
+            else:
+                time = (200/34) + ((control_dist_km-200)/32)
         else:
             time = (200/34) + ((control_dist_km-200)/32)
     elif control_dist_km <= 600:
@@ -76,13 +79,18 @@ def close_time(control_dist_km, brevet_dist_km, brevet_start_time):
     # within each range, more if else statemnts to determine the max time for controls exceding brevet length
     if control_dist_km == 0:
         time = 1
+    elif control_dist_km <= 60:
+        time = (control_dist_km/20) + 1
     elif control_dist_km <= 200:
         time = control_dist_km/15
     elif control_dist_km <= 400:
         if brevet_dist_km == 200:
             time = 13.5
         elif brevet_dist_km == 300:
-            time = 20
+            if control_dist_km >= 300:
+                time = 20
+            else:
+                time = control_dist_km/15
         else:
             time = control_dist_km/15
     elif control_dist_km <= 600:
