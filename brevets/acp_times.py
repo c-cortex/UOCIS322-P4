@@ -10,7 +10,7 @@ import arrow
 #  You MUST provide the following two functions
 #  with these signatures. You must keep
 #  these signatures even if you don't use all the
-#  same arguments.
+#  same arguments
 
 
 def open_time(control_dist_km, brevet_dist_km, brevet_start_time):
