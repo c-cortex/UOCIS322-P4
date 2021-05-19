@@ -68,3 +68,7 @@ def test_1000():
     assert str(acp_times.close_time(890, 1000, arrow.get('2021-01-01T00:00')).format('YYYY-MM-DDTHH:mm')) == "2021-01-03T17:23"
     assert str(acp_times.open_time(1190, 1000, arrow.get('2021-01-01T00:00')).format('YYYY-MM-DDTHH:mm')) == "2021-01-02T09:05"
     assert str(acp_times.close_time(1180, 1000, arrow.get('2021-01-01T00:00')).format('YYYY-MM-DDTHH:mm')) == "2021-01-04T03:00"
+
+def test_close_200_400():
+    assert str(acp_times.close_time(200, 200, arrow.get('2021-01-01T00:00')).format('YYYY-MM-DDTHH:mm')) == "2021-01-01T13:30"
+    assert str(acp_times.close_time(400, 400, arrow.get('2021-01-01T00:00')).format('YYYY-MM-DDTHH:mm')) == "2021-01-02T03:00"
